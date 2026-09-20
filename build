@@ -1,0 +1,9 @@
+#!/bin/bash
+
+set -euo pipefail
+
+# Usage: ./build [ NAME ] [ FILE ]
+
+g++ -o "$1.out" "$2" -O2 -Wall -Wextra -Weffc++ -pedantic
+
+eval "./$1.out"
